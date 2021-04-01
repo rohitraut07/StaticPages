@@ -1,0 +1,18 @@
+<div id="main4">
+    {% for item in items %}
+    <div class="main4-box-img">
+        <img src="{{ item['image_link'] }}" alt="Avatar" />
+    </div>
+
+        <div class="main4-box-text">
+            <h1>
+                <a href="#"><b>{{ item['title'] }}</b></a>
+            </h1>
+            <br />
+            <p style="font-size: 15px">
+                {{ item['description'] }}
+            </p>
+            <h6>{{ item['site_name'] }}</h6>
+        </div>
+    {% endfor %}
+</div>

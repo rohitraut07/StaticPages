@@ -1,0 +1,60 @@
+<div id="main2">
+    <div id="main2-box1">
+        <div class="card">
+            <img src="{{ items[0]['image_link'] }}" alt="Avatar" />
+            <div class="container">
+                <br />
+                <h1>
+                    <a href="#"><b>{{ items[0]['title'] }}}</b></a>
+                </h1>
+                <br />
+                <p style="font-size: 30px">
+                    {{ items[0]['description'] }}}
+                </p>
+                <br />
+                <h6>{{ items[0]['site_name'] }}</h6>
+            </div>
+        </div>
+    </div>
+    <!-- box1 class end   -->
+    <div id="main2-box2">
+        <div class="card" id="main2-card1-id1">
+            <img src="{{ items[1]['image_link'] }}" alt="Avatar" />
+            <div class="container">
+                <br />
+                <h3>
+                    <a href="#"><b>{{ items[1]['title'] }}</b></a>
+                </h3>
+                <br />
+
+                <p>
+                    {{ items[1]['description'] }}
+                </p>
+                <br />
+                <h6>{{ items[1]['site_name'] }}}</h6>
+            </div>
+        </div>
+    </div>
+    <!-- box2 class end   -->
+    {% for item in range(2,5) %}
+    <div id="main2-box{{ loop.index+2 }}">
+        <div class="card">
+            <img src="{{ items[item]['image_link'] }}" alt="Avatar" />
+            <div class="container">
+                <br />
+                <h3>
+                    <a href="#"><b>{{ items[item]['title'] }}</b></a>
+                </h3>
+                <br />
+
+                <p>
+                    {{ items[item]['description'] }}}
+                </p>
+                <br />
+                <h6>{{ items[item]['site_name'] }}</h6>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- main2 class end   -->
